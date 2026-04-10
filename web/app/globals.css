@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --void: #06060f;
+  --neon-cyan: #00fff0;
+  --neon-magenta: #ff2fd0;
+  --panel: rgba(12, 16, 40, 0.72);
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  color: #e8f4ff;
+  background: radial-gradient(ellipse 120% 80% at 50% -20%, #1a1035 0%, var(--void) 45%);
+  min-height: 100dvh;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+/* Scanline veil — subtle, not full-screen flash */
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 240, 0.02) 2px,
+    rgba(0, 255, 240, 0.02) 4px
+  );
+  z-index: 9999;
+  opacity: 0.35;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+    filter: drop-shadow(0 0 12px rgba(0, 255, 240, 0.35));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 22px rgba(255, 47, 208, 0.45));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4.5s ease-in-out infinite;
+}

@@ -1,0 +1,17 @@
+# Foundry
+out/
+cache/
+broadcast/
+
+# Next.js
+web/.next/
+web/node_modules/
+
+# Env
+.env
+.env.local
+web/.env
+web/.env.local
+
+# OS
+.DS_Store

@@ -1,0 +1,12 @@
+{
+  "name": "neon-frontier",
+  "private": true,
+  "description": "Root scripts delegate to web/ (Vercel Root Directory). Run `npm run dev` here or `cd web && npm run dev`.",
+  "scripts": {
+    "dev": "npm run dev --prefix web",
+    "build": "npm run build --prefix web",
+    "lint": "npm run lint --prefix web",
+    "start": "npm run start --prefix web",
+    "generate:assets": "npm run generate:assets --prefix web"
+  }
+}
