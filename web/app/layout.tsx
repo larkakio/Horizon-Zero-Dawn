@@ -15,8 +15,13 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const baseAppId = process.env.NEXT_PUBLIC_BASE_APP_ID ?? "";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+/** Production defaults so Base domain verification & OG work if env is missing at build */
+const PRODUCTION_SITE_URL = "https://horizon-zero-dawn-three.vercel.app";
+const DEFAULT_BASE_APP_ID = "69d8a03dd5e6222067938081";
+
+const baseAppId =
+  process.env.NEXT_PUBLIC_BASE_APP_ID ?? DEFAULT_BASE_APP_ID;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? PRODUCTION_SITE_URL;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

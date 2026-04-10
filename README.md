@@ -13,6 +13,8 @@ Horizon-inspired **neon cyberpunk** mobile web game: swipe the arena to move, ta
 
 **Deployed `CheckIn` (Base mainnet):** [`0x0A138315a532B294da09Df49C2C1861a8a996D35`](https://basescan.org/address/0x0A138315a532B294da09Df49C2C1861a8a996D35) — deployment tx [`0xd4e1d1bdcc96f604e8a6f14319c92f596fd6d1bd35d7fd05cdadf233ee793975`](https://basescan.org/tx/0xd4e1d1bdcc96f604e8a6f14319c92f596fd6d1bd35d7fd05cdadf233ee793975).
 
+**Production (Vercel):** [https://horizon-zero-dawn-three.vercel.app](https://horizon-zero-dawn-three.vercel.app)
+
 ## Base App
 
 - Standard **web app + wallet** ([migrate to standard web app](https://docs.base.org/apps/quickstart/migrate-to-standard-web-app)). No Farcaster mini-app SDK required.

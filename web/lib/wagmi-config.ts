@@ -2,6 +2,8 @@ import { http, createConfig, createStorage, cookieStorage } from "wagmi";
 import { injected, walletConnect, baseAccount } from "@wagmi/connectors";
 import { base, mainnet } from "wagmi/chains";
 
+const PRODUCTION_SITE_URL = "https://horizon-zero-dawn-three.vercel.app";
+
 const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID;
 
 const connectors = [
@@ -17,8 +19,7 @@ const connectors = [
           metadata: {
             name: "Neon Frontier",
             description: "Neon Frontier — Machine Hunt",
-            url:
-              process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
+            url: process.env.NEXT_PUBLIC_SITE_URL ?? PRODUCTION_SITE_URL,
             icons: ["/icon.jpg"],
           },
         }),
